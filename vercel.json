@@ -2,13 +2,13 @@
   "builds": [
     {
       "src": "app/todo/wsgi.py",
-      "use": "@vercel/python",
+      "use": "@ardnt/vercel-python-wsgi",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.10.4" }
     }
   ],
   "routes": [
     {
-      "src": "/app/(.*)",
+      "src": "/(.*)",
       "dest": "elevate/wsgi.py"
     }
   ]
