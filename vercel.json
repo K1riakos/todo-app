@@ -3,13 +3,13 @@
     {
       "src": "app/todo/wsgi.py",
       "use": "@ardnt/vercel-python-wsgi",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.10.4" }
+      "config": { "maxLambdaSize": "15mb" }
     }
   ],
   "routes": [
     {
-      "src": "/app/(.*)",
-      "dest": "todo/wsgi.py"
+      "src": "/(.*)",
+      "dest": "app/todo/wsgi.py"
     }
   ]
 }
